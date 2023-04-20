@@ -2,17 +2,15 @@
 	"name": "adlsg2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage2",
+			"referenceName": "HttpServer1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileName": "file",
-				"folderPath": "output",
-				"fileSystem": "data"
+				"type": "HttpServerLocation",
+				"relativeUrl": "file"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
