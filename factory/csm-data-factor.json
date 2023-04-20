@@ -1,0 +1,9 @@
+{
+	"name": "csm-data-factor",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f4b72d2a-f3f7-4528-b454-c889de45dce3",
+		"tenantId": "92019512-f026-436d-9f3e-47d3b2fb7089"
+	}
+}
