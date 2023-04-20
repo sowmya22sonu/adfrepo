@@ -5,10 +5,6 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "adlsg2",
-						"type": "DatasetReference"
-					},
 					"name": "source1"
 				}
 			],
@@ -28,8 +24,7 @@
 				"          Column_6 as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
+				"     validateSchema: false) ~> source1",
 				"source1 select(mapColumn(",
 				"          Column_1,",
 				"          Column_2,",
