@@ -13,7 +13,11 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "select1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          Column_1 as string,",
@@ -25,7 +29,17 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 select(mapColumn(",
+				"          Column_1,",
+				"          Column_2,",
+				"          Column_3,",
+				"          Column_4,",
+				"          Column_5,",
+				"          Column_6",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1"
 			]
 		}
 	}
